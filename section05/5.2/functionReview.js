@@ -22,7 +22,7 @@ function testAverage(...scores) {
   return average;
 }
 
-testAverage(92, 71, 85, 83);
+// testAverage(92, 71, 85, 83);
 
 // Invoke testAverage with the following parameters: 92, 71, 85, 83
 
@@ -50,4 +50,33 @@ function gradeCheck(grade) {
   }
 }
 
-gradeCheck(testAverage(92, 71, 85, 83));
+// gradeCheck(testAverage(92, 71, 85, 83));
+
+// Declare a function called summerPlans
+//  These are the requirements of the function:
+//    Accepts two parameters: name and outcome (result will be passed as an argument through outcome)
+//    Inside the function, create an object called student
+//    this object will have two properties with keys name and school
+//    set the value of the name key to be the name parameter
+//    set the value of the school key to be the outcome parameter
+//    set up an if conditional that examines if outcome is true/false
+//    if true, print "<student name>'s will be attending summer school."
+//    if false, print "<student name>'s will be going on vacation this summer!"
+// Hint, you will need to utilize both dot notation and template literals to properly set up these conditions and what they print
+
+function summerPlans(name, outcome) {
+  let student = {
+    name: name,
+    school: outcome
+  };
+  if (student.school === true) {
+    console.log(`${name} will be attending summer school.`);
+  }
+  if (student.school === false) {
+    console.log(`${name} will be going on vacation this summer!`);
+  }
+}
+
+// Invoke summerPlans with a name of your choice and the result variable
+
+summerPlans("Vann", gradeCheck(testAverage(100, 100, 50, 50)));
